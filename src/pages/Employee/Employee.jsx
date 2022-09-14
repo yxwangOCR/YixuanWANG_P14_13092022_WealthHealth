@@ -6,8 +6,8 @@ function Employee() {
   return (
     <div>
       <h1>Current Employees</h1>
+      <Table />
       <Link to="/" className="view-home-link">
-        <Table />
         Home
       </Link>
     </div>

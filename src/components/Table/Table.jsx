@@ -1,33 +1,26 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import MaterialTable from "material-table";
-
+import React from "react";
+import MUIDataTable from "mui-datatables";
 
 function Table() {
+  const columns = ["Name", "Company", "City", "State"];
+
+  const data = [
+    ["Joe James", "Test Corp", "Yonkers", "NY"],
+    ["John Walsh", "Test Corp", "Hartford", "CT"],
+    ["Bob Herm", "Test Corp", "Tampa", "FL"],
+    ["James Houston", "Test Corp", "Dallas", "TX"],
+  ];
+
+  const options = {
+    filterType: "checkbox",
+  };
   return (
-    <div style={{ maxWidth: "100%" }}>
-      <MaterialTable
-        columns={[
-          { title: "Adı", field: "name" },
-          { title: "Soyadı", field: "surname" },
-          { title: "Doğum Yılı", field: "birthYear", type: "numeric" },
-          {
-            title: "Doğum Yeri",
-            field: "birthCity",
-            lookup: { 34: "İstanbul", 63: "Şanlıurfa" },
-          },
-        ]}
-        data={[
-          {
-            name: "Mehmet",
-            surname: "Baran",
-            birthYear: 1987,
-            birthCity: 63,
-          },
-        ]}
-        title="Demo Title"
-      />
-    </div>
+    <MUIDataTable
+      title={"Employee List"}
+      data={data}
+      columns={columns}
+      options={options}
+    />
   );
 }
 

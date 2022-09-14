@@ -7,7 +7,7 @@ import Department from "../Department/Department";
 
 function Form() {
   const methods = useForm();
-  const { handleSubmit } = methods;
+  const { handleSubmit, getValues } = methods;
   return (
     <FormProvider {...methods}>
       <form
@@ -17,7 +17,29 @@ function Form() {
         <BaseInfo />
         <Address />
         <Department />
-        <input type="submit" value="Save" className="submit-btn"/>
+        <input type="submit" value="Save" className="submit-btn" />
+
+        <button
+          type="button"
+          className="submit-btn"
+          onClick={() => {
+            const values = getValues();
+            const multipleValues = getValues([
+              "firstName",
+              "lastName",
+              "birthday",
+              "startDate",
+              "street",
+              "city",
+              "country",
+              "zipCode",
+            ]);
+            console.log(multipleValues);
+            console.log(values);
+          }}
+        >
+          Save
+        </button>
       </form>
     </FormProvider>
   );

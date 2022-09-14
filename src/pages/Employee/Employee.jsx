@@ -7,7 +7,7 @@ function Employee() {
     <div>
       <h1>Current Employees</h1>
       <Link to="/" className="view-home-link">
-        <Table></Table>
+        <Table />
         Home
       </Link>
     </div>

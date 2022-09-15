@@ -1,7 +1,7 @@
 import React from "react";
+import "./Address.css";
 import { useFormContext } from "react-hook-form";
 import CountrySelector from "../CountrySelector/CountrySelector";
-import "./Address.css";
 
 function Address() {
   const methods = useFormContext();
@@ -15,8 +15,11 @@ function Address() {
       <label>City: </label>
       <input type="text" {...methods.register("city")} />
 
-      <label>State: </label>
-      <CountrySelector {...methods.register("country")} />
+      <label>Country: </label>
+      <span {...methods.register("country")}>
+        {" "}
+        <CountrySelector />
+      </span>
 
       <label>Zip Code: </label>
       <input {...methods.register("zipCode")} />
@@ -25,3 +28,6 @@ function Address() {
 }
 
 export default Address;
+
+//Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+//UseController :  https://react-hook-form.com/api/usecontroller#main

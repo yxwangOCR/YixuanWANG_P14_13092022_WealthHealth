@@ -8,6 +8,7 @@ import Department from "../Department/Department";
 function Form() {
   const methods = useForm();
   const { handleSubmit, getValues } = methods;
+
   return (
     <FormProvider {...methods}>
       <form
@@ -17,7 +18,7 @@ function Form() {
         <BaseInfo />
         <Address />
         <Department />
-        <input type="submit" value="Save" className="submit-btn" />
+        {/*<input type="submit" value="Save" className="submit-btn" />*/}
 
         <button
           type="button"

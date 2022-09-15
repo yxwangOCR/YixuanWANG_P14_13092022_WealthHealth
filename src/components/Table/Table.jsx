@@ -76,22 +76,34 @@ function Table() {
       },
     },
   ];
-  const data = [
-    {
-      firstName: "Joe",
-      lastName: "James",
-      startDate: "Test Corp",
-      city: "Yonkers",
-      state: "NY",
-    },
-    { name: "John Walsh", company: "Test Corp", city: "Hartford", state: "CT" },
-    { name: "Bob Herm", company: "Test Corp", city: "Tampa", state: "FL" },
-  ];
 
   const options = {
-    filterType: "checkbox",
+    filterType: "dropdown",
   };
-  return <MUIDataTable data={data} columns={columns} options={options} />;
+
+  const data = [
+    {
+      firstName: "Joe James",
+      lastName: "Test Corp",
+      startDate: "20110909",
+      city: "Yonkers",
+      country: "Canada",
+      state: "NY",
+    },
+    {
+      firstName: "John Walsh",
+      lastName: "Test Corp",
+      stateDate: "20220901",
+      city: "Hartford",
+      country: "Canada",
+      state: "CT",
+    },
+  ];
+  return (
+    <>
+      <MUIDataTable data={data} columns={columns} options={options} />
+    </>
+  );
 }
 
 export default Table;

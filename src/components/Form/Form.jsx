@@ -8,6 +8,7 @@ import Department from "../Department/Department";
 function Form() {
   const methods = useForm();
   const { handleSubmit, getValues } = methods;
+  const data = []
 
   return (
     <FormProvider {...methods}>

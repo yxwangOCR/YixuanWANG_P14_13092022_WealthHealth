@@ -14,3 +14,7 @@ function CountrySelector() {
 }
 
 export default CountrySelector;
+
+//react-select-country-list + react-hook-form hint : https://stackoverflow.com/questions/68350169/register-values-with-useform-and-react-select-country-list
+
+//react-select-country-list: https://www.npmjs.com/package/react-select-country-list

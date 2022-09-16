@@ -16,7 +16,7 @@ function Table() {
       label: "Last Name",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -24,7 +24,7 @@ function Table() {
       label: "Start Date",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -32,7 +32,7 @@ function Table() {
       label: "Departement",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -40,7 +40,7 @@ function Table() {
       label: "Date of Birth",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -48,7 +48,7 @@ function Table() {
       label: "Street",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -56,7 +56,7 @@ function Table() {
       label: "City",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -64,7 +64,7 @@ function Table() {
       label: "State",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -72,7 +72,7 @@ function Table() {
       label: "Zip Code",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
   ];
@@ -83,22 +83,29 @@ function Table() {
 
   const data = [
     {
-      firstName: "Joe James",
-      lastName: "Test Corp",
-      startDate: "20110909",
-      city: "Yonkers",
-      country: "Canada",
-      state: "NY",
+      firstName: "John",
+      lastName: "Doe",
+      startDate: "12-09-2022",
+      departement: "Sales",
+      birthday: "10-10-1999",
+      street: "xxx xxx-xxx",
+      city: "NY",
+      country: "USA",
+      zipCode: "www-yyy-yyy",
     },
     {
-      firstName: "John Walsh",
-      lastName: "Test Corp",
-      stateDate: "20220901",
-      city: "Hartford",
-      country: "Canada",
-      state: "CT",
+      firstName: "Anna",
+      lastName: "Lee",
+      startDate: "13-09-2012",
+      departement: "Marketing",
+      birthday: "12-01-1990",
+      street: "xss xxx-xxx",
+      city: "Paris",
+      country: "France",
+      zipCode: "yyy-yyy-uuu",
     },
   ];
+
   return (
     <>
       <MUIDataTable data={data} columns={columns} options={options} />

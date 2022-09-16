@@ -4,12 +4,17 @@ import { useForm, FormProvider } from "react-hook-form";
 import BaseInfo from "../BaseInfo/BaseInfo";
 import Address from "../Address/Address";
 import Department from "../Department/Department";
+//import Table from "../Table/Table";
 
 function Form() {
   const methods = useForm();
-  const { handleSubmit, getValues } = methods;
-  const data = []
+  const { getValues, handleSubmit } = methods;
+  const getData = () => {
+    const values = getValues();
+    console.log(values);
+  };
 
+  
   return (
     <FormProvider {...methods}>
       <form
@@ -19,25 +24,13 @@ function Form() {
         <BaseInfo />
         <Address />
         <Department />
-        {/*<input type="submit" value="Save" className="submit-btn" />*/}
 
         <button
           type="button"
           className="submit-btn"
           onClick={() => {
-            const values = getValues();
-            const multipleValues = getValues([
-              "firstName",
-              "lastName",
-              "birthday",
-              "startDate",
-              "street",
-              "city",
-              "country",
-              "zipCode",
-            ]);
-            console.log(multipleValues);
-            console.log(values);
+            getData();
+            console.log("====");
           }}
         >
           Save

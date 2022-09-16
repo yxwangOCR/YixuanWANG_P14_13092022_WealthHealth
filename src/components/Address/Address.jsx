@@ -1,12 +1,9 @@
 import React from "react";
 import "./Address.css";
 import { useFormContext } from "react-hook-form";
-import CountrySelector from "../CountrySelector/CountrySelector";
-import CountrySelectorController from "../CountrySelector/CountrySelectorController";
 import CountrySelectorCustom from "../CountrySelectorCustom/CountrySelectorCustom";
-//import Mui from "../CountrySelectorMui/Mui";
 
-function Address({ control }) {
+function Address() {
   const methods = useFormContext();
 
   return (
@@ -19,30 +16,8 @@ function Address({ control }) {
       <label>City: </label>
       <input type="text" {...methods.register("city")} />
 
-      <label>
-        Country Selector Test 1 : Custom component by react-select-country-list
-        library:{" "}
-      </label>
-      <span {...methods.register("country")}>
-        {" "}
-        <CountrySelector />
-      </span>
-      <label>
-        Country Test 2 : Custom component wrapped by controller of
-        react-hook-form:{" "}
-      </label>
-      <span {...methods.register("country")}>
-        <CountrySelectorController />
-      </span>
-
-      <label>Country Test 3 : Custom component by fetching data: </label>
+      <label>Country:</label>
       <CountrySelectorCustom />
-
-      <label>
-        Country Test 4 : Custom component by MUI (with Warning for formState &
-        fieldState):{" "}
-      </label>
-      {/*<Mui control={control} />*/}
 
       <label>Zip Code: </label>
       <input {...methods.register("zipCode")} />

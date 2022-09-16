@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 function CountrySelectorCustom() {
-  const { register } = useForm();
+  const methods = useFormContext();
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function CountrySelectorCustom() {
 
   return (
     <div>
-      <select {...register("country")}>
+      <select {...methods.register("country")}>
         <option value="">-Select Country-</option>
         {countries.map((item) => {
           return <option key={item.country}>{item.country}</option>;

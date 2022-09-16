@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Table from "../../components/Table/Table";
-import { useStateMachine } from "little-state-machine";
-import updateAction from "../../updateAction";
 
-function Employee(props) {
-  const { state } = useStateMachine(updateAction);
-
+function Employee() {
   return (
     <div>
       <h1>Current Employees</h1>
 
-      <Table data={JSON.stringify(state)} />
+      <Table />
       <Link to="/" className="view-home-link">
         Home
       </Link>

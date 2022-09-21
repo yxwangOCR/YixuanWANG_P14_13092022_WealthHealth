@@ -4,7 +4,8 @@ import { useForm, FormProvider } from "react-hook-form";
 import BaseInfo from "../BaseInfo/BaseInfo";
 import Address from "../Address/Address";
 import Department from "../Department/Department";
-import { Popup } from "../../lib/Popup";
+import { Popup } from "p14-popup";
+import '../../lib/Popup.css'
 
 function Form() {
   const methods = useForm();

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Form.css";
 import { useForm, FormProvider } from "react-hook-form";
 import BaseInfo from "../BaseInfo/BaseInfo";
 import Address from "../Address/Address";
 import Department from "../Department/Department";
-//import Table from "../Table/Table";
+import { Popup } from "../../lib/Popup";
 
 function Form() {
   const methods = useForm();
@@ -14,29 +14,37 @@ function Form() {
     console.log(values);
   };
 
-  
-  return (
-    <FormProvider {...methods}>
-      <form
-        onSubmit={handleSubmit((data) => console.log(data))}
-        className="form-container"
-      >
-        <BaseInfo />
-        <Address />
-        <Department />
+  const [buttonPopup, setButtonPopup] = useState(false);
 
-        <button
-          type="button"
-          className="submit-btn"
-          onClick={() => {
-            getData();
-            console.log("====");
-          }}
+  return (
+    <>
+      <FormProvider {...methods}>
+        <form
+          onSubmit={handleSubmit((data) => console.log(data))}
+          className="form-container"
         >
-          Save
-        </button>
-      </form>
-    </FormProvider>
+          <BaseInfo />
+          <Address />
+          <Department />
+
+          <button
+            type="button"
+            className="submit-btn"
+            onClick={() => {
+              getData();
+              console.log("====");
+              setButtonPopup(true);
+            }}
+          >
+            Save
+          </button>
+        </form>
+      </FormProvider>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <h1>Success! </h1>
+        <p>Employee Created!</p>
+      </Popup>
+    </>
   );
 }
 

@@ -7,6 +7,7 @@ function Department() {
 
   return (
     <select {...methods.register("department")} className="department-list">
+      <option value="">-Select Department-</option>
       <option value="sales">Sales</option>
       <option value="marketing">Marketing</option>
       <option value="engineering">Engineering</option>

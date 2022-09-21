@@ -11,6 +11,15 @@
     border: 1px solid #adadad;
     border-radius: 8px;
     font-size: 14px;
-    height: 35px;
-    padding: 10px
+    height: 46px;
+    padding: 10px;
+    border: 1px solid rgb(153,169,68)
+}
+fieldset{
+    border: 2px solid rgb(153,169,68)
+}
+
+legend{
+    font-size: 2rem;
+    color: rgb(153,169,68)
 }

@@ -1,8 +1,8 @@
 .form-container{
     display: flex;
     flex-direction: column;
-    margin: 2rem auto;
-    width: 20rem;
+    margin: 5rem auto;
+    
 }
 
 .submit-btn{
@@ -13,10 +13,13 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    background-color: rgb(153,169,68);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .submit-btn:hover {
     background-color: black;
-    color: white;
     transition: all 0.3s ease-out;
   }

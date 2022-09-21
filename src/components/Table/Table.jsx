@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import MUIDataTable from "mui-datatables";
+import "./Table.css";
+import { Context } from "../../hooks/createContext";
 
-function Table() {
+function Table({ value }) {
   const columns = [
     {
       name: "firstName",
@@ -81,7 +83,20 @@ function Table() {
     filterType: "dropdown",
   };
 
-  const data = [
+  const { data } = useContext(Context);
+
+  return (
+    <div className="table-container">
+      <h2>Current Employees</h2>
+      <MUIDataTable data={data} columns={columns} options={options} />
+    </div>
+  );
+}
+
+export default Table;
+
+/**
+ const data = [
     {
       firstName: "John",
       lastName: "Doe",
@@ -106,11 +121,4 @@ function Table() {
     },
   ];
 
-  return (
-    <>
-      <MUIDataTable data={data} columns={columns} options={options} />
-    </>
-  );
-}
-
-export default Table;
+ */

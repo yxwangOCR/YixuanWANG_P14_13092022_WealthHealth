@@ -85,7 +85,7 @@ function Table() {
 
   const DataTable = [];
   const { data } = useEmployee();
-  DataTable.push(data);
+  DataTable.push(...[data]);
 
   //useEmployee(() => data, [data]);
 
@@ -94,6 +94,7 @@ function Table() {
   useEffect(() => {
     console.log(data);
     console.log(setData);
+    DataTable.push(data);
   }, [data]);
 */
 

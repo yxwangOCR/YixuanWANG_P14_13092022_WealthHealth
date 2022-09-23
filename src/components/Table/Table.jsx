@@ -100,6 +100,16 @@ function Table() {
   }, [data]);
 */
 
+  // Add row:
+  /*
+  const { data, setData } = useEmployee({ employee: [] });
+
+  const [row] = useEmployee('employee')
+  
+  return 
+   <MUIDataTable row={row} data={DataTable} columns={columns} options={options} />
+  */
+
   return (
     <div className="table-container">
       <h2>Current Employees</h2>

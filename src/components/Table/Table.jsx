@@ -84,8 +84,10 @@ function Table() {
   };
 
   const DataTable = [];
-  const { data } = useEmployee();
+  const { data, setData } = useEmployee();
   DataTable.push(...[data]);
+
+  //setData(DataTable.concat(data));
 
   //useEmployee(() => data, [data]);
 

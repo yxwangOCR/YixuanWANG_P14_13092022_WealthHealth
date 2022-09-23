@@ -17,16 +17,20 @@ function BaseInfo() {
         <label>First Name</label>
         <input
           type="text"
-          {...methods.register("firstName", { required: true })}
+          {...methods.register("firstName", {
+            required: "First name is required",
+          })}
         />
-        {errors.firstName?.type === "required" && "First name is required"}
+        {errors.firstName?.message}
 
         <label>Last Name</label>
         <input
           type="text"
-          {...methods.register("lastName", { required: true })}
+          {...methods.register("lastName", {
+            required: "Last name is required",
+          })}
         />
-        {errors.lastName && <p>Last name is required</p>}
+        {errors.lastName?.message}
 
         <label>Date of Birth</label>
         <input
@@ -51,3 +55,5 @@ function BaseInfo() {
 }
 
 export default BaseInfo;
+
+//Read : https://react-hook-form.com/api/useform/seterror

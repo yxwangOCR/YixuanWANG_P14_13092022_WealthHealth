@@ -1,0 +1,10 @@
+.logo{
+    height: 6rem;
+    width: 6rem;
+}
+
+.header-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useEffect } from "react";
 import MUIDataTable from "mui-datatables";
 import "./Table.css";
-import { Context } from "../../hooks/createContext";
+import useEmployee from "../../hooks/useEmployee";
 
-function Table({ value }) {
+function Table() {
   const columns = [
     {
       name: "firstName",
@@ -83,42 +83,28 @@ function Table({ value }) {
     filterType: "dropdown",
   };
 
-  const { data } = useContext(Context);
+  const DataTable = [];
+  const { data } = useEmployee();
+  DataTable.push(data);
+
+  //useEmployee(() => data, [data]);
+
+  //console.log(useEmployee());
+  /*
+  useEffect(() => {
+    console.log(data);
+    console.log(setData);
+  }, [data]);
+*/
 
   return (
     <div className="table-container">
       <h2>Current Employees</h2>
-      <MUIDataTable data={data} columns={columns} options={options} />
+      <MUIDataTable data={DataTable} columns={columns} options={options} />
     </div>
   );
 }
 
 export default Table;
 
-/**
- const data = [
-    {
-      firstName: "John",
-      lastName: "Doe",
-      startDate: "12-09-2022",
-      departement: "Sales",
-      birthday: "10-10-1999",
-      street: "xxx xxx-xxx",
-      city: "NY",
-      country: "USA",
-      zipCode: "www-yyy-yyy",
-    },
-    {
-      firstName: "Anna",
-      lastName: "Lee",
-      startDate: "13-09-2012",
-      departement: "Marketing",
-      birthday: "12-01-1990",
-      street: "xss xxx-xxx",
-      city: "Paris",
-      country: "France",
-      zipCode: "yyy-yyy-uuu",
-    },
-  ];
-
- */
+// Read : https://github.com/react-hook-form/react-hook-form/issues/494

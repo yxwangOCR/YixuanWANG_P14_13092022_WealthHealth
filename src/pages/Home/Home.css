@@ -4,21 +4,11 @@
     gap: 1rem
 }
 
-.logo{
-    height: 6rem;
-    width: 6rem;
-}
-
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4rem;
-}
-.header-item{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
 .view-employee-link button{

@@ -5,17 +5,15 @@ import BaseInfo from "../BaseInfo/BaseInfo";
 import Address from "../Address/Address";
 import Department from "../Department/Department";
 import { Popup } from "p14-popup";
-import '../../lib/Popup.css'
+import "../../lib/Popup.css";
+import useEmployee from "../../hooks/useEmployee";
+import { Link } from "react-router-dom";
 
 function Form() {
   const methods = useForm();
-  const { getValues, handleSubmit } = methods;
-  const getData = () => {
-    const values = getValues();
-    console.log(values);
-  };
-
+  const { getValues, handleSubmit, setError } = methods;
   const [buttonPopup, setButtonPopup] = useState(false);
+  const { setData } = useEmployee();
 
   return (
     <>
@@ -32,9 +30,9 @@ function Form() {
             type="button"
             className="submit-btn"
             onClick={() => {
-              getData();
-              console.log("====");
+              setData(getValues());
               setButtonPopup(true);
+              setError("firstName");
             }}
           >
             Save
@@ -42,8 +40,11 @@ function Form() {
         </form>
       </FormProvider>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h1>Success! </h1>
-        <p>Employee Created!</p>
+        <Link to="/employee-list" className="view-employee-link">
+          <button>
+            <h1>Success!</h1>View Employee List
+          </button>
+        </Link>
       </Popup>
     </>
   );

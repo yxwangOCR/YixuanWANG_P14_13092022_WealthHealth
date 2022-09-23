@@ -83,37 +83,12 @@ function Table() {
     filterType: "dropdown",
   };
 
-  const DataTable = [];
-  const { data, setData } = useEmployee();
-  DataTable.push(...[data]);
-
-  //setData(DataTable.concat(data));
-
-  //useEmployee(() => data, [data]);
-
-  //console.log(useEmployee());
-  /*
-  useEffect(() => {
-    console.log(data);
-    console.log(setData);
-    DataTable.push(data);
-  }, [data]);
-*/
-
-  // Add row:
-  /*
-  const { data, setData } = useEmployee({ employee: [] });
-
-  const [row] = useEmployee('employee')
-  
-  return 
-   <MUIDataTable row={row} data={DataTable} columns={columns} options={options} />
-  */
+  const { data } = useEmployee();
 
   return (
     <div className="table-container">
       <h2>Current Employees</h2>
-      <MUIDataTable data={DataTable} columns={columns} options={options} />
+      <MUIDataTable data={data} columns={columns} options={options} />
     </div>
   );
 }

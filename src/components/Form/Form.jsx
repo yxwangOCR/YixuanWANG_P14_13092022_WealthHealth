@@ -17,25 +17,22 @@ function Form() {
     },
   });
   const {
-    getValues,
-    setError,
-    clearErrors,
     formState: { errors },
-    watch,
     reset,
   } = methods;
   const [buttonPopup, setButtonPopup] = useState(false);
-  const { setData } = useEmployee();
+  const { addEmployee } = useEmployee();
 
-  console.log(errors);
-
-  console.log(watch());
+  const onSubmit = (values) => {
+    addEmployee(values);
+    setButtonPopup(true);
+  }
 
   return (
     <>
       <FormProvider {...methods}>
         <form
-          onSubmit={methods.handleSubmit((data) => console.log(data))}
+          onSubmit={methods.handleSubmit(onSubmit)}
           className="form-container"
         >
           <BaseInfo errors={errors} />
@@ -44,13 +41,8 @@ function Form() {
 
           <div className="buttons">
             <button
-              type="button"
+              type="submit"
               className="submit-btn"
-              onClick={() => {
-                setData(getValues());
-                setButtonPopup(true);
-                setError();
-              }}
             >
               Save
             </button>

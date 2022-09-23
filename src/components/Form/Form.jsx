@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Form.css";
 import { useForm, FormProvider } from "react-hook-form";
 import BaseInfo from "../BaseInfo/BaseInfo";
@@ -11,7 +11,11 @@ import { Link } from "react-router-dom";
 
 function Form() {
   const methods = useForm();
-  const { getValues, handleSubmit, setError } = methods;
+  const {
+    getValues,
+    setError,
+    formState: { errors },
+  } = methods;
   const [buttonPopup, setButtonPopup] = useState(false);
   const { setData } = useEmployee();
 
@@ -19,12 +23,12 @@ function Form() {
     <>
       <FormProvider {...methods}>
         <form
-          onSubmit={handleSubmit((data) => console.log(data))}
+          onSubmit={methods.handleSubmit((data) => console.log(data))}
           className="form-container"
         >
-          <BaseInfo />
-          <Address />
-          <Department />
+          <BaseInfo errors={errors} />
+          <Address errors={errors} />
+          <Department errors={errors} />
 
           <button
             type="button"

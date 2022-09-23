@@ -2,13 +2,11 @@ import React from "react";
 import { useFormContext } from "react-hook-form";
 import "./BaseInfo.css";
 
-// Error message does not work.
-
 function BaseInfo() {
-  const methods = useFormContext();
   const {
+    register,
     formState: { errors },
-  } = methods;
+  } = useFormContext();
 
   return (
     <div className="basic-info-container">
@@ -17,38 +15,26 @@ function BaseInfo() {
         <label>First Name</label>
         <input
           type="text"
-          {...methods.register("firstName", {
+          {...register("firstName", {
             required: "First name is required",
           })}
         />
-        {errors.firstName?.message}
+        <p className="error-message">{errors.firstName?.message}</p>
 
         <label>Last Name</label>
         <input
           type="text"
-          {...methods.register("lastName", {
+          {...register("lastName", {
             required: "Last name is required",
           })}
         />
-        {errors.lastName?.message}
+        <p className="error-message">{errors.lastName?.message}</p>
 
         <label>Date of Birth</label>
-        <input
-          type="date"
-          {...methods.register("birthday", {
-            required: "Birthday is required",
-          })}
-        />
-        <p>{errors.birthday?.message}</p>
+        <input type="date" {...register("birthday")} />
 
         <label>Start Date</label>
-        <input
-          type="date"
-          {...methods.register("startDate", {
-            required: "Start date is required",
-          })}
-        />
-        <p>{errors.startDate?.message}</p>
+        <input type="date" {...register("startDate")} />
       </div>
     </div>
   );

@@ -7,3 +7,8 @@
     padding: 10px;
     border: 1px solid rgb(153,169,68)
 }
+
+.department-error{
+    text-align: left;
+    color: red;
+}

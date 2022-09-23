@@ -4,23 +4,35 @@ import { useFormContext } from "react-hook-form";
 import CountrySelectorCustom from "../CountrySelectorCustom/CountrySelectorCustom";
 
 function Address() {
-  const methods = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <fieldset className="address-container">
       <legend>Address</legend>
 
       <label>Street: </label>
-      <input type="text" {...methods.register("street")} />
+      <input
+        type="text"
+        {...register("street", { required: "Street is required" })}
+      />
+      <p className="error-message">{errors.street?.message}</p>
 
       <label>City: </label>
-      <input type="text" {...methods.register("city")} />
+      <input
+        type="text"
+        {...register("city", { required: "City is required" })}
+      />
+      <p className="error-message">{errors.city?.message}</p>
 
       <label>Country:</label>
-      <CountrySelectorCustom />
+      <CountrySelectorCustom errors={errors} />
 
       <label>Zip Code: </label>
-      <input {...methods.register("zipCode")} />
+      <input {...register("zipCode", { required: "Zip Code is required" })} />
+      <p className="error-message">{errors.zipCode?.message}</p>
     </fieldset>
   );
 }

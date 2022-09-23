@@ -30,7 +30,7 @@ function Table() {
       },
     },
     {
-      name: "departement",
+      name: "department",
       label: "Departement",
       options: {
         filter: true,

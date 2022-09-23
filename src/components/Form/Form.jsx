@@ -10,14 +10,26 @@ import useEmployee from "../../hooks/useEmployee";
 import { Link } from "react-router-dom";
 
 function Form() {
-  const methods = useForm();
+  const methods = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+    },
+  });
   const {
     getValues,
     setError,
+    clearErrors,
     formState: { errors },
+    watch,
+    reset,
   } = methods;
   const [buttonPopup, setButtonPopup] = useState(false);
   const { setData } = useEmployee();
+
+  console.log(errors);
+
+  console.log(watch());
 
   return (
     <>
@@ -30,17 +42,28 @@ function Form() {
           <Address errors={errors} />
           <Department errors={errors} />
 
-          <button
-            type="button"
-            className="submit-btn"
-            onClick={() => {
-              setData(getValues());
-              setButtonPopup(true);
-              setError("firstName");
-            }}
-          >
-            Save
-          </button>
+          <div className="buttons">
+            <button
+              type="button"
+              className="submit-btn"
+              onClick={() => {
+                setData(getValues());
+                setButtonPopup(true);
+                setError();
+              }}
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              className="reset-btn"
+              onClick={() => {
+                reset();
+              }}
+            >
+              Reset
+            </button>
+          </div>
         </form>
       </FormProvider>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>

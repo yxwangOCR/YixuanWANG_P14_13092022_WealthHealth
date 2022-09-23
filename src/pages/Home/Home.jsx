@@ -13,7 +13,6 @@ function Home() {
           <button>View Current Employee</button>
         </Link>
       </div>
-
       <Form />
     </div>
   );

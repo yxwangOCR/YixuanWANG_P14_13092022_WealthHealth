@@ -9,7 +9,7 @@ This application manages employee records.
 [![Rollup.js](https://img.shields.io/badge/rollup.js-2.79.0-orange)](https://rollupjs.org/guide/en/)
 [![Storybook](https://img.shields.io/badge/Storybook-6.5-pink)](https://storybook.js.org/)
 
-[![Logo](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Logo%20-%20Wealth%20Health.png)](https://openclassrooms.com/fr/paths/314/projects/815/assignment)
+![Logo](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Logo%20-%20Wealth%20Health.png)
 
 ## Project Requests
 
@@ -19,7 +19,8 @@ This application manages employee records.
 
 ## Demo
 
-Insert gif or link to demo
+![Demo1](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Demo-part-1.gif)
+![Demo2](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Demo-part-2.gif)
 
 ## How To Use
 

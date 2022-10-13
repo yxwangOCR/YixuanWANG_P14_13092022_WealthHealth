@@ -11,7 +11,7 @@ This application manages employee records.
 
 [![Logo](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Logo%20-%20Wealth%20Health.png)](https://openclassrooms.com/fr/paths/314/projects/815/assignment)
 
-## Key Features
+## Project Requests
 
 - Create a new version of "Create Employee" and "Employee List" pages with React.
 - Add a state management system.
@@ -35,6 +35,12 @@ Install the project :
   yarn install
 ```
 
+Install Modal window plugin:
+
+```bash
+  yarn install p14-popup
+```
+
 In the project directory, you can run:
 
 ```bash
@@ -54,6 +60,6 @@ Open http://localhost:3000 to view it in your browser.
 
 ## Useful tutorials for building this project
 
-- [Build And Publish A React Component Library](https://www.youtube.com/watch?v=hf6Z8OZanec&list=PLoS4Z9Rl1iEjrHGSGDiNPQMA8gWgcMneu&index=6)
-- [Build a POPUP component in React JS ~ A Beginner Tutorial with React Hooks!](https://www.youtube.com/watch?v=i8fAO_zyFAM&list=PLoS4Z9Rl1iEjrHGSGDiNPQMA8gWgcMneu&index=2&t=1s)
+- [Build and publish a React Component Library](https://www.youtube.com/watch?v=hf6Z8OZanec&list=PLoS4Z9Rl1iEjrHGSGDiNPQMA8gWgcMneu&index=6)
+- [Build a POPUP component in React JS - A Beginner Tutorial with React Hooks!](https://www.youtube.com/watch?v=i8fAO_zyFAM&list=PLoS4Z9Rl1iEjrHGSGDiNPQMA8gWgcMneu&index=2&t=1s)
 - [Select Country Input with React Hook Form v7 - React Micro Project for Beginners](https://www.youtube.com/watch?v=UUYCJIPuT8Q&list=PLoS4Z9Rl1iEjrHGSGDiNPQMA8gWgcMneu&index=1)

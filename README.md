@@ -19,10 +19,10 @@ This application manages employee records.
 
 ## Demo
 
-Demo Part 1:
+- Demo Part 1:
 ![Demo1](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Demo-part-1.gif)
 
-Demo Part 2:
+- Demo Part 2:
 ![Demo2](https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth/blob/master/src/assets/Demo-part-2.gif)
 
 ## How To Use

@@ -26,7 +26,7 @@ function Form() {
   const onSubmit = (values) => {
     addEmployee(values);
     setButtonPopup(true);
-  }
+  };
 
   return (
     <>
@@ -40,10 +40,7 @@ function Form() {
           <Department errors={errors} />
 
           <div className="buttons">
-            <button
-              type="submit"
-              className="submit-btn"
-            >
+            <button type="submit" className="submit-btn">
               Save
             </button>
             <button

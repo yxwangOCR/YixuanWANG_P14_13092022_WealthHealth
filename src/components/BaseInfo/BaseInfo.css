@@ -37,3 +37,13 @@
     margin: 3.5rem;
   }
 }
+
+@media (max-width: 360px){
+  .basic-info-container h2{
+    font-size: 1rem;
+    
+  }
+  .basic-info-item{
+    margin: 1.5rem;
+  } 
+}

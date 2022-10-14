@@ -13,15 +13,17 @@ function Address() {
     <fieldset className="address-container">
       <legend>Address</legend>
 
-      <label>Street: </label>
+      <label htmlFor="street">Street: </label>
       <input
+        id="street"
         type="text"
         {...register("street", { required: "Street is required" })}
       />
       <p className="error-message">{errors.street?.message}</p>
 
-      <label>City: </label>
+      <label htmlFor="city">City: </label>
       <input
+        id="city"
         type="text"
         {...register("city", { required: "City is required" })}
       />
@@ -30,8 +32,11 @@ function Address() {
       <label>Country:</label>
       <CountrySelectorCustom errors={errors} />
 
-      <label>Zip Code: </label>
-      <input {...register("zipCode", { required: "Zip Code is required" })} />
+      <label htmlFor="zipcode">Zip Code: </label>
+      <input
+        id="zipcode"
+        {...register("zipCode", { required: "Zip Code is required" })}
+      />
       <p className="error-message">{errors.zipCode?.message}</p>
     </fieldset>
   );

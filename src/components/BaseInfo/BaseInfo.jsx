@@ -12,8 +12,9 @@ function BaseInfo() {
     <div className="basic-info-container">
       <h2>Create Employee</h2>
       <div className="basic-info-item">
-        <label>First Name</label>
+        <label htmlFor="firstname">First Name</label>
         <input
+          id="firstname"
           type="text"
           {...register("firstName", {
             required: "First name is required",
@@ -21,8 +22,9 @@ function BaseInfo() {
         />
         <p className="error-message">{errors.firstName?.message}</p>
 
-        <label>Last Name</label>
+        <label htmlFor="lastname">Last Name</label>
         <input
+          id="lastname"
           type="text"
           {...register("lastName", {
             required: "Last name is required",
@@ -30,11 +32,11 @@ function BaseInfo() {
         />
         <p className="error-message">{errors.lastName?.message}</p>
 
-        <label>Date of Birth</label>
-        <input type="date" {...register("birthday")} />
+        <label htmlFor="birthday">Date of Birth</label>
+        <input id="birthday" type="date" {...register("birthday")} />
 
-        <label>Start Date</label>
-        <input type="date" {...register("startDate")} />
+        <label htmlFor="start">Start Date</label>
+        <input id="start" type="date" {...register("startDate")} />
       </div>
     </div>
   );

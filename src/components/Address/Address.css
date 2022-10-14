@@ -52,3 +52,17 @@ legend {
     padding: 1rem;
   }
 }
+
+
+@media (max-width: 360px){
+  .address-container input{
+    width: 94%;
+    margin: 0 0.8rem
+  }
+
+  .address-container label{
+    margin: 0 0.8rem
+  }
+
+
+}

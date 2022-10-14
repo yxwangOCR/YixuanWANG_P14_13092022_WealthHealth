@@ -19,3 +19,12 @@
     margin: 0 2.4rem
   }
 }
+
+@media (max-width: 360px){
+  .country-list{
+    margin: 0 0.8rem
+  }
+  .country-list select{
+    width: 104%;
+  }
+}

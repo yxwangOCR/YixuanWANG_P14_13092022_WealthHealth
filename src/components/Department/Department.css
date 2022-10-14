@@ -24,3 +24,9 @@
     margin: 3.5rem;
   } 
 }
+
+@media (max-width: 360px){
+  .department-list{
+    margin: 0 1.5rem;
+  } 
+}

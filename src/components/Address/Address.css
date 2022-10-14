@@ -23,3 +23,32 @@ legend {
   font-size: 2rem;
   color: rgb(153, 169, 68);
 }
+
+@media (max-width: 440px){
+  .address-container{
+    padding: 0.7rem;
+  }
+  .address-container input {
+    margin: 0 1.8rem
+  }
+  .address-container label{
+    margin: 0 2rem
+  }
+
+  legend {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 435px){
+  .address-container input {
+    margin: 0 2.4rem
+  }
+  .address-container label{
+    margin: 0 2.4rem
+  }
+
+  .address-container{
+    padding: 1rem;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MUIDataTable from "mui-datatables";
 import "./Table.css";
 import useEmployee from "../../hooks/useEmployee";

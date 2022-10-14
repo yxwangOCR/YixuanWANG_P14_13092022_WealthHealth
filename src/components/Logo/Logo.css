@@ -8,3 +8,9 @@
   align-items: center;
   gap: 1rem;
 }
+
+@media (max-width: 680px) {
+  .header-item{
+    flex-direction: column;
+  }
+}

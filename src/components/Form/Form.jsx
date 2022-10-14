@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Form.css";
 import { useForm, FormProvider } from "react-hook-form";
 import BaseInfo from "../BaseInfo/BaseInfo";

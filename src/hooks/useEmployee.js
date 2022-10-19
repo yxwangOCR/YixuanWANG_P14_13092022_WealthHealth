@@ -4,6 +4,7 @@ import employeeContext from "./createContext";
 
 const useEmployee = () => {
   const { data, setData } = useContext(employeeContext);
+  // grab employeeContext and data variable that we are passing through context provider  
 
   const addEmployee = (employee) => {
     setData([...data, employee]);

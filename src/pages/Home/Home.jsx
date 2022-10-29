@@ -9,9 +9,21 @@ function Home() {
     <div className="home-container">
       <div className="header">
         <Logo />
-        <Link to="/employee-list" className="view-employee-link">
-          <button>View Current Employee</button>
-        </Link>
+        <div className="links">
+          <Link to="/employee-list" className="view-employee-link">
+            <button>View Current Employee</button>
+          </Link>
+
+          <button className="gitHub__link">
+            <a
+              href="https://github.com/yxwangOCR/YixuanWANG_P14_13092022_WealthHealth"
+              rel="noopener"
+              target="blank"
+            >
+              Code Source On GitHub
+            </a>
+          </button>
+        </div>
       </div>
       <Form />
     </div>

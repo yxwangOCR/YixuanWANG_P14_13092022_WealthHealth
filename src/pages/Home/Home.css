@@ -10,6 +10,10 @@
   align-items: center;
   padding: 4rem;
 }
+.links{
+  display: flex;
+  gap: 1rem;
+}
 
 .view-employee-link button {
   padding: 8px 12px;
@@ -20,6 +24,20 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
+}
+
+.gitHub__link{
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background-color: rgb(153, 169, 68);
+  font-weight: 600;
+  cursor: pointer;
+}
+.gitHub__link a{
+  color: white;
+  text-decoration: none;
 }
 
 .view-employee-link button:hover {

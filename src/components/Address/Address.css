@@ -24,15 +24,15 @@ legend {
   color: rgb(153, 169, 68);
 }
 
-@media (max-width: 440px){
-  .address-container{
+@media (max-width: 440px) {
+  .address-container {
     padding: 0.7rem;
   }
   .address-container input {
-    margin: 0 1.8rem
+    margin: 0 1.8rem;
   }
-  .address-container label{
-    margin: 0 2rem
+  .address-container label {
+    margin: 0 2rem;
   }
 
   legend {
@@ -40,29 +40,26 @@ legend {
   }
 }
 
-@media (max-width: 435px){
+@media (max-width: 435px) {
   .address-container input {
-    margin: 0 2.4rem
+    margin: 0 2.4rem;
   }
-  .address-container label{
-    margin: 0 2.4rem
+  .address-container label {
+    margin: 0 2.4rem;
   }
 
-  .address-container{
+  .address-container {
     padding: 1rem;
   }
 }
 
-
-@media (max-width: 360px){
-  .address-container input{
+@media (max-width: 360px) {
+  .address-container input {
     width: 94%;
-    margin: 0 0.8rem
+    margin: 0 0.8rem;
   }
 
-  .address-container label{
-    margin: 0 0.8rem
+  .address-container label {
+    margin: 0 0.8rem;
   }
-
-
 }

@@ -13,20 +13,20 @@
   color: red;
 }
 
-@media (max-width: 440px){
-  .department-list{
+@media (max-width: 440px) {
+  .department-list {
     margin: 2.6rem;
-  } 
+  }
 }
 
-@media (max-width: 435px){
-  .department-list{
+@media (max-width: 435px) {
+  .department-list {
     margin: 3.5rem;
-  } 
+  }
 }
 
-@media (max-width: 360px){
-  .department-list{
+@media (max-width: 360px) {
+  .department-list {
     margin: 0 1.5rem;
-  } 
+  }
 }

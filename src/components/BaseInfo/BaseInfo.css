@@ -20,30 +20,29 @@
   border: 1px solid rgb(153, 169, 68);
 }
 
-@media (max-width: 460px){
-  .basic-info-item{
+@media (max-width: 460px) {
+  .basic-info-item {
     margin: 2rem;
-  } 
-} 
-
-@media (max-width: 440px){
-  .basic-info-item{
-    margin: 2.7rem;
-  } 
+  }
 }
 
-@media (max-width: 435px){
-  .basic-info-item{
+@media (max-width: 440px) {
+  .basic-info-item {
+    margin: 2.7rem;
+  }
+}
+
+@media (max-width: 435px) {
+  .basic-info-item {
     margin: 3.5rem;
   }
 }
 
-@media (max-width: 360px){
-  .basic-info-container h2{
+@media (max-width: 360px) {
+  .basic-info-container h2 {
     font-size: 1rem;
-    
   }
-  .basic-info-item{
+  .basic-info-item {
     margin: 1.5rem;
-  } 
+  }
 }

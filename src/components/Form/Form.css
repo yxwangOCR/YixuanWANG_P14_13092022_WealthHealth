@@ -24,9 +24,8 @@
   transition: all 0.3s ease-out;
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
   .form-container {
     margin: 1rem auto;
   }
 }
-

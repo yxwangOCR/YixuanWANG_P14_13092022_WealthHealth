@@ -8,23 +8,23 @@
   border: 1px solid rgb(153, 169, 68);
 }
 
-@media (max-width: 440px){
-  .country-list{
-    margin: 0 1.8rem
+@media (max-width: 440px) {
+  .country-list {
+    margin: 0 1.8rem;
   }
 }
 
-@media (max-width: 435px){
-  .country-list{
-    margin: 0 2.4rem
+@media (max-width: 435px) {
+  .country-list {
+    margin: 0 2.4rem;
   }
 }
 
-@media (max-width: 360px){
-  .country-list{
-    margin: 0 0.8rem
+@media (max-width: 360px) {
+  .country-list {
+    margin: 0 0.8rem;
   }
-  .country-list select{
+  .country-list select {
     width: 104%;
   }
 }

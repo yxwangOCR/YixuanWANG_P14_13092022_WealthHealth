@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/YixuanWANG_P14_13092022_WealthHealth/static/css/main.0d929d4e.css",
+    "main.js": "/YixuanWANG_P14_13092022_WealthHealth/static/js/main.1364c922.js",
+    "static/media/logo.png": "/YixuanWANG_P14_13092022_WealthHealth/static/media/logo.12bb56cc0cc5d6e45381.png",
+    "index.html": "/YixuanWANG_P14_13092022_WealthHealth/index.html",
+    "main.0d929d4e.css.map": "/YixuanWANG_P14_13092022_WealthHealth/static/css/main.0d929d4e.css.map",
+    "main.1364c922.js.map": "/YixuanWANG_P14_13092022_WealthHealth/static/js/main.1364c922.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d929d4e.css",
+    "static/js/main.1364c922.js"
+  ]
+}
